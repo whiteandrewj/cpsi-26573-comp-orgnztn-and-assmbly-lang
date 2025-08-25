@@ -28,4 +28,9 @@ main	endp		; directive   - "main" is the label. "endp" is a directive that indic
 ; arrays of other types such as integers can also be declared, e.g. nums sdword 2,5,7
 
 ; mov is similar to the assignment operator "=" in C, in that it actually copies the data
-; 
+; mov always moves data from the right operand (source) to the left operand (destination)
+; for example, in C when the assignment x=y is made data is loaded from a location in RAM into a "register" on the CPU ("load" operation) and then stored back to another location in RAM ("store" operation). 
+; the mov instruction is shorthand for this
+; Fach processor has it's own unique set of registers. 16-bit Intel CPU's had registers which could each hold 16 bits (four general-purpose registers named ax, bx, cx, dx).
+; The 386 CPU introduced 32-bit registers which were renamed with 'e' prefix to denote their expanded capacity (eax, ebx, ecx, edx)
+; The first 16 bits of the 386 registers can be addressed with their old names. Additionally, each 8 bit segment can be addressed using the "h" (high) or "l" (low) prefix (ah, al, bh, bl, ch, cl, dh, dl)
