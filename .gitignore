@@ -1,6 +1,5 @@
 *.sln
-*.vcxproj
-*.vcxproj.filters
-*.vcxproj.user
+*.vcxproj*
 *.log
 *.tlog
+*.exe*
