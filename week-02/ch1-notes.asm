@@ -33,4 +33,19 @@ main	endp		; directive   - "main" is the label. "endp" is a directive that indic
 ; the mov instruction is shorthand for this
 ; Fach processor has it's own unique set of registers. 16-bit Intel CPU's had registers which could each hold 16 bits (four general-purpose registers named ax, bx, cx, dx).
 ; The 386 CPU introduced 32-bit registers which were renamed with 'e' prefix to denote their expanded capacity (eax, ebx, ecx, edx)
-; The first 16 bits of the 386 registers can be addressed with their old names. Additionally, each 8 bit segment can be addressed using the "h" (high) or "l" (low) prefix (ah, al, bh, bl, ch, cl, dh, dl)
+; The first 16 bits of the 386 registers can be addressed with their old names. Additionally, each 8 bit segment can be addressed using the "h" (high) or "l" (low) suffix (ah, al, bh, bl, ch, cl, dh, dl)
+; Each general use register has conventional uses
+; 	eax: Accumulator - useful for arithmetic operations (different naming than other processors where all registers can be called "accumulators"
+;	ebx: Base - useful for array processing
+;	ecx: Counter - useful for special loop instructions
+;	edx: Data - useful as a data register in arithmetic instructions
+; In addition to the general-use registers, there are others
+;	esp: stack pointer (top)
+;	ebp: stack pointer (bottom)
+;	esi: source index
+;	edi: destination index
+;	cs:  points to code segment (set by .code directive)
+;	ds:  points to data segment (set by .data directive)
+;	ss:  points to stack segment (set by .stack directive)
+;	eip: instruction pointer (which instructions will be executed next)
+;	eflags: status of CPU after executing instructions
