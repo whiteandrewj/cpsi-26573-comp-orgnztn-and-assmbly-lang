@@ -3,3 +3,5 @@
 *.log
 *.tlog
 *.exe*
+.vs*
+Debug*
